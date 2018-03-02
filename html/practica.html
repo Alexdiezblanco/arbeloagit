@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<meta charset="utf-8"></meta>
+<meta name="lang" content="es"/>
+<meta name="author" content="Alejandro"/>
+<meta name="description" content="ejercicio"/>
+<meta name="keywords" content="ejercicio, propio, documento"/>
+<link rel="stylesheet" type="text/css" href="../css/practica.css">
+<script type="text/javascript" src="../js/prueba.js"></script>
+
+	<title>Práctica 16-Febrero-2018 Alejandro DI</title>
+
+</head>
+	
+<body>
+
+	<!-- Inicio de la práctica con un título apropiado a lo que se está haciendo -->
+
+	<!-- Todas las etiquetas tienen su apertura y su cierre -->
+
+
+<header>
+	
+	<h1>Prueba práctica</h1>
+
+</header>
+
+
+<section>
+
+	<form name="registro" method="get" onsubmit="return valDatosForm();">
+
+		<fieldset>
+			
+			<legend>Datos de registro</legend>
+
+			<!-- En este apartado se colocan los campos a rellenar -->
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" size="30" maxlength="20" onchange="validarEmail();" placeholder="dfsdf@das.es" required><br>
+			<p id="avisoEmail"></p>
+
+			<label>Alias:</label>
+			<input type="text" id="alias" name="alias" size="30" maxlength="20" placeholder="Escriba su alias" required><br>
+			<p id="avisoAlias"></p>
+
+			<label for="contraseña">Contraseña:</label>
+			<input type="password" id="contraseña" name="contraseña" size="30" required><br>
+			<p id="avisoPassword"></p>
+
+			<label for="repetir">Repetir contraseña:</label>
+			<input type="password" id="repetir" name="repetir" size="30"><br><br>
+			
+
+				<h2>RECORDATORIO DE CONTRASEÑA</h2><br><br>
+
+				<!-- En este apartado se colocan una serie de preguntas y un espacio para la respuesta -->
+
+				Seleccione una pregunta:<select id="pregunta" name="pregunta">
+				<option selected="true" default disabled="true">Escoge pregunta</option>
+				<option value="1">¿Tu fecha de nacimiento?</option>
+				<option value="2">¿Tu color favorito?</option>
+				<option value="3">¿Cómo se llama tu abuela materna?</option>
+				<option value="4">¿Cuál es tu número de teléfono móvil?</option>
+				<option value="5">¿Tu DNI?</option>
+				<option value="6">¿Cuál es tu número de teléfono de empresa?</option>
+			</select><br>
+			<p id="avisoPregunta"></p>
+
+			Respuesta:<input type="text" id="respuesta" size="30" name="respuesta" placeholder="Escriba la respuesta"><br>
+			<p id="avisoRespuesta"></p>
+
+		</fieldset>
+
+		<!-- En este apartado se colocan los botones para enviar el formulario -->
+
+			Acepto la <a href="#">política de privacidad</a> y las <a href="#">condiciones de la promoción</a><input type="checkbox" id="casilla" name="casilla" onchange="habilitar()"><br><br>
+
+			<input type="submit" value="Enviar" id="boton" disabled>
+
+	</form>
+
+	<!-- Fin del formulario -->
+
+</section>
+
+	<!-- Inicio del pie o final de la página en el que se pone el copyright, política de privacidad y la política de cookies -->
+
+	
+<footer>
+	
+	<p>&copy; 2018 Todos los Derechos Reservados</p>
+
+		<p>
+			
+			<ul>
+
+				<li><a href="#">Política de privacidad</a></li>
+				<li><a href="#">Política de cookies</a></li>
+				
+			</ul>
+
+		</p>
+	
+</footer>
+
+		<!-- Lo puesto en el index es un adorno estilístico que me atrevo a poner
+ -->
+	<a href="../index.html"><img src="../images/logo.jpg" width="100" height="100"></a>
+
+	<!-- Fin de la práctica del día 16 de Febrero de 2018     --> 
+
+</body>
+</html>
