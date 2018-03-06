@@ -1,152 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<meta charset="utf-8"></meta>
-	<meta name="lang" content="es"/>
-	<meta name="author" content="Alejandro"/>
-	<meta name="lang" content="es" />
-	<meta name="description" content="ejercicio"/>
-	<meta name="keywords" content="ejercicio, propio, documento"/>
-	<link rel="stylesheet" href="css/practica.css" type="text/css">
 	
+<meta charset="utf-8"></meta>
+<meta name="lang" content="es"/>
+<meta name="author" content="Alejandro"/>
+<meta name="description" content="ejercicio"/>
+<meta name="keywords" content="ejercicio, propio, documento"/>
+<link rel="stylesheet" type="text/css" href="css/practica.css">
+<script type="text/javascript" src="js/prueba.js"></script>
+
 	<title>Práctica 16-Febrero-2018 Alejandro DI</title>
 
 </head>
-
+	
 <body>
 
 	<!-- Inicio de la práctica con un título apropiado a lo que se está haciendo -->
 
 	<!-- Todas las etiquetas tienen su apertura y su cierre -->
 
-	<header>
 
-		<h1>Prueba práctica</h1>
+<header>
+	
+	<h1>Prueba práctica</h1>
 
-	</header>
+</header>
 
+<nav>
+	
+	<a href="html/poema.html">Poema de Manuel Jáñez</a>
 
-			<nav>
-
-				<div id="menu">
-
-					<li><a href="html/practica.html">Ejercicio 16-02-2018</a></li>
-
-				</div><br><br>
-				
-			</nav>
-
-<!-- Este poema de Manuel Jáñez es un adorno estilístico que me atrevo a poner -->
-
-	<section>
-
-		<div id="poema">
-
-			<p>
-				Las campanas del Mercado<br>	
-				Trenzan las hebras del viento<br>
-				Y la noche, entre lamentos,<br>
-				Va enlutando los tejados.<br>
-
-			</p>
-
-			<p>
-				
-				Una Virgen Dolorosa<br>
-				Desnuda de lujo y galas<br>
-				Se acerca a las Carbajalas<br>
-				Sobre una alfombra de rosas.<br>
-
-			</p>
-
-			<p>
-				
-				León le tiende su mano<br>
-				Curtida en sueños e historia,<br>
-				Cuando en un trono de gloria<br>
-				Llega a la Plaza del Grano.<br>
-			</p>
-
-			<p>
-				
-				Ella es arrullo, cobijo,<br>
-				Caricia, beso y abrazo.<br>
-				Ella es doliente regazo<br>
-				De madre arropando a un hijo.<br>
-
-			</p>
-
-			<p>
-				
-				Quién pudiera ser consuelo<br>
-				Para aliviar Tu dolor.<br>
-				Quién pudiera ser amor<br>
-				Para enredarse en Tu pelo.<br>
+</nav><br><br>
 
 
-			</p>
+<section>
 
-			<p>
-				
-				Papones, con mucho arte,<br>
-				Acompasan sus pisadas<br>
-				Y la luna, enamorada,<br>
-				Se asoma para mirarte.<br>
+	<form name="registro" method="get" onsubmit="return valDatosForm();">
 
-			</p>
+		<fieldset>
 
-			<p>
-				
-				La tarde no Te perdona<br>
-				Esos besos sin muestrario<br><br>
-				Que cuelgan como rosarios<br>
-				Del brillo de Tu corona.<br>
+			
+			<legend>Datos de registro</legend>
 
-			</p>
+			<!-- En este apartado se colocan los campos a rellenar -->
 
-			<p>
-				
-				Se esconden las emociones<br>
-				Entre hileras de ofrecidas,<br>
-				Que con velas encendidas,<br>
-				Van recitando oraciones.<br>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" size="30" maxlength="20" onchange="validarEmail();" placeholder="dfsdf@das.es" required><br>
+			<p id="avisoEmail"></p>
 
-			</p>
+			<label for="alias">Alias:</label>
+			<input type="text" id="alias" name="alias" size="30" maxlength="20" placeholder="Escriba su alias" required><br>
+			<p id="avisoAlias"></p>
 
-			<p>
-				
-				La Salve de los braceros<br>
-				Hace que brote Tu llanto<br><br>
-				Mientras Te adornan el manto<br>
-				Con un cielo de luceros.<br>
+			<label for="postal">Código Postal:</label>
+			<input type="text" id="postal" name="postal" size="6" placeholder="24003"><br>
+			<p id="avisoPostal"></p>
 
-			</p>
+			<label for="contraseña">Contraseña:</label>
+			<input type="password" id="contraseña" name="contraseña" size="30" required><br>
+			<p id="avisoPassword"></p>
 
-			<p>
-				¡Morena de mis amores,<br>
-				Reina y Madre de León,<br>
-				Siempre vas de procesión<br><br>
-				Cada Viernes de Dolores!<br>
+			<label for="repetir">Repetir contraseña:</label>
+			<input type="password" id="repetir" name="repetir" size="30"><br><br>
+			
 
-			</p>
+				<h2>RECORDATORIO DE CONTRASEÑA</h2><br><br>
 
-			<b>Manuel Jáñez Gallego</b>
+				<!-- En este apartado se colocan una serie de preguntas y un espacio para la respuesta -->
 
-		</div>
+				Seleccione una pregunta:<select id="pregunta" name="pregunta">
+				<option selected="true" default disabled="true">Escoge pregunta</option>
+				<option value="1">¿Tu fecha de nacimiento?</option>
+				<option value="2">¿Tu color favorito?</option>
+				<option value="3">¿Cómo se llama tu abuela materna?</option>
+				<option value="4">¿Cuál es tu número de teléfono móvil?</option>
+				<option value="5">¿Tu DNI?</option>
+				<option value="6">¿Cuál es tu número de teléfono de empresa?</option>
+			</select><br>
+			<p id="avisoPregunta"></p>
 
-<!-- Este poema versa sobre la imagen de culto y procesional llamada La Morenica expuesta en la Iglesia del Mercado -->
+			Respuesta:<input type="text" id="respuesta" size="30" name="respuesta" placeholder="Escriba la respuesta"><br>
+			<p id="avisoRespuesta"></p>
 
-	</section>
+		</fieldset>
 
-	<!-- Fin de la sección -->
+		<!-- En este apartado se colocan los botones para enviar el formulario -->
 
-	<!-- Inicio del pie o final de la página -->
+			Acepto la <a href="#">política de privacidad</a> y las <a href="#">condiciones de la promoción</a><input type="checkbox" id="casilla" name="casilla" onchange="habilitar()"><br><br>
 
+			<input type="submit" value="Enviar" id="boton" disabled>
 
-	<footer>
-		
-		<p>&copy; 2018 Todos los Derechos Reservados</p>
+	</form>
+
+	<!-- Fin del formulario -->
+
+</section>
+
+	<!-- Inicio del pie o final de la página en el que se pone el copyright, política de privacidad y la política de cookies -->
+
+	
+<footer>
+	
+	<p>&copy; 2018 Todos los Derechos Reservados</p>
 
 		<p>
 			
@@ -157,13 +113,9 @@
 				
 			</ul>
 
-
 		</p>
-
-	</footer>
-
-	<!-- Fin de la práctica del día 16 de Febrero de 2018     -->         
-
+	
+</footer>
 
 </body>
 </html>
