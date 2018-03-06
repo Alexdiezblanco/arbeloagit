@@ -9,6 +9,9 @@ function valDatosForm(){
 	var alias = document.getElementById("alias").value;
 	console.log("alias ",alias);
 
+	var postal = document.getElementById("postal").value;
+	console.log("postal ",postal);
+
 	var contraseña = document.getElementById("contraseña").value;
 	console.log("contraseña ",contraseña);
 
@@ -27,6 +30,8 @@ function valDatosForm(){
 	validarEmail(email);
 
 	validarAlias(alias);
+
+	validarPostal(postal);
 
 	validarRespuesta(respuesta);
 
@@ -53,6 +58,9 @@ function mostrarError(paramErr) {
 
 	if (paramErr == "avisoAlias")
 		document.getElementById(paramErr).innerHTML = "El alias debe ser mayor de cuatro caracteres";
+
+	if (paramErr == "avisoPostal")
+		document.getElementById(paramErr).innerHTML = "El código postal debe tener cinco caracteres";
 
 	if (paramErr == "avisoEmail")
 		document.getElementById(paramErr).innerHTML = "El email debe ser mayor de tres caracteres";
@@ -117,6 +125,22 @@ function validarAlias(alias){
 	}
 
 };
+
+
+// Función que valida el código postal
+
+function validarPostal(postal){
+
+	if (postal.length < 5){
+		mostrarError("avisoPostal");
+		return false;
+	}
+	else{
+		limpiarError("avisoPostal");
+		return true;
+	}
+};
+
 
 // Función que valida la respuesta
 
